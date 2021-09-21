@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Using Truffle
+title: Deploy with Truffle
 ---
 
 Sisu is in Testnet Phase 1 with deployment URL `https://rpc.talon-1.network`. We will update the guideline when we get to Testnet Phase 2 or mainnet.

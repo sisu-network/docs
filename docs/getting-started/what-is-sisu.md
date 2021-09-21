@@ -5,7 +5,7 @@ title: What is Sisu?
 
 Sisu is a blockchain built for the future of decentralized apps. Sisu solves 2 of the hardest problems in blockchain: a decentralized cross chain communciation and a fast executable smart contract execution.
 
-With Sisu, you can mint your NFT or deploy your DeFi smart conrtact and then seamlessly your assets into other chains.
+With Sisu, you can mint your NFT or deploy your DeFi smart conrtact and then seamlessly transfer your assets into other chains.
 
 This video summarizes what is Sisu about.
 

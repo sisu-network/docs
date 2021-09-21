@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Pre-requisite
 ---
 
-Let's walk through some of the common cross chain solutions and their shortcomings before we discuss Sisu's solution.
+Let's walk through some of the common cross chain solutions and their shortcomings before we discuss Sisu's cross chain solution.
 
 To transfer assets cross chain, most solutions employ a gateway smart contract or wallet. This contract/wallet is the door of a chain: any assets going in/out of the contract has to go through this door.
 

@@ -4,7 +4,9 @@ custom_edit_url: null
 title: Quick Start
 ---
 
-### Developer Quick Start
+# Developer Quick Start
+
+## Deploy smart contract
 
 Sisu is in Testnet Phase 1 where developers can deploy their smart contracts. If you are an Ethereum developer, you should have no problem deploying your app to Sisu.
 
@@ -29,3 +31,9 @@ const web3 = new Web3('https://faucet.talon-1.network/')
 
 // You can start using web3 from now on.
 ```
+
+## Note
+
+IMPORTANT NOTE: Sisu network is still in active development. The dev testnet has been released and developers can do tokens transfer cross chain but it is subject to major update including data reset. When we get to stable testnet phase, the data will be kept permanently on-chain.
+
+Please check our [timeline](/docs/more-info/timeline) for Sisu network's progress. We will give you full update and documentation when Testnet Phase 2 is launched.
