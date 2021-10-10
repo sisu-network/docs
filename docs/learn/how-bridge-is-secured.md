@@ -1,6 +1,5 @@
 ---
-sidebar_position: 1
-title: Pre-requisite
+title: How a bridge is secured?
 ---
 
 Let's walk through some of the common cross chain solutions and their shortcomings before we discuss Sisu's cross chain solution.
@@ -14,6 +13,13 @@ One of the most common solutions is to use on-chain multi-signature in a smart c
 
 This solution is fairly easy to implement as it only requires counting the number of votes for each transaction. The downside of on-chain multi-signature is its cost. You would need N on-chain approval transactions to unlock one single transaction. Imagine that each transaction requires 30 approval. This means it would cost 30 transaction fee to execute one single cross chain transfer. On expensive blockchain like Ethereum, this would add a heavy cost to a cross chain transfer.
 
+**Pros**:
+- Easy to implement.
+- Gateway is secured by multi parties
+
+**Cons**:
+- Very expensive. Required N transaction on-chain to dispatch a single transaction
+
 ## Single owner of the gateway contract
 Another common solution employed by many cross chain communication is to have a single owner of the gateway smart contract. This contract owner keeps the private key that control the gateway. Any transaction from this contract only requires a single signature and hence fast and efficient.
 
@@ -21,5 +27,9 @@ The downside of this solution is obviously the sacrifice of decentralization. Si
 
 What we want is a solution that is cheap (ideally one single transaction per cross chain transfer request) and decentralized (needs approval from multiple parties). This is where Sisu's solution fits in as it provides a cheaper and more decentralized solution for locking/unlocking assets from gateway smart contracts.
 
+**Pros**:
+- Easy to implement.
+- Require only one transaction per request
 
-
+**Cons**:
+- Fragile solution due to single point of failure. The loss of the private key could put all assets locked in all chains at risk.
