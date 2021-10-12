@@ -34,3 +34,5 @@ Unlike Shamir Secret Sharing, TSS does not reconstruct the private key during th
 What happens if some nodes are offine at the signing phase?
 
 Another benefit of TSS is that it allows the t-of-n nodes singing models which requires only **any t** nodes out of n to be online at the signing phase. For example, if our TSS scheme is 15-of-20, we can tolerate up to any 5 nodes to be offline to produce a valid signature.
+
+TSS supports both ECDSA and EDDSA, two cryptography scheme that are used by most network. On theory, Sisu is capable of producing signature for any blockchain.
