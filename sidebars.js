@@ -30,6 +30,7 @@ module.exports = {
         "learn/how-bridge-is-secured",
         "learn/sisu-mpc-bridge",
         "learn/token-swap",
+        "learn/cross-chain-contract-interaction",
       ],
     },
   ],

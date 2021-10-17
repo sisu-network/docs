@@ -1,7 +1,7 @@
 ---
 title: Token Swap
 ---
-There are 2 common models for token swapping cross chain: using wrapped tokens and building an AMM (automatic market marker). There is a third model using atomic swap and hashed timelock contract but they are often tied to a few chains instead of a being a general solution.
+There are 2 common models for token swapping cross chain: using wrapped tokens and building an AMM (automated market maker). There is a third model using atomic swap and hashed timelock contract but they are often tied to a few chains instead of a being a general solution.
 
 ## Wrapped Token Approach
 
@@ -22,7 +22,13 @@ This approach requires an ERC20 contract (or some equivalent contract) deployed 
 ## AMM Model
 The AMM concept was introduced by Uniswap team on Ethereum main chain. The basic idea behind AMM is to retain a constant curve x * y = k where x is the supply and y is an exchange rate between 2 tokens. When someone buys a token A, the supply of A decreases and hence the exchange rate of A with B increases to keep the equilibrium. The increase in exchange rate disincentivies people to buy token A and incentivies buyer to buy token B.
 
-Some initial AMM contract often sufferse from impermanent loss.
+<!-- ![Example of automated market maker](https://miro.medium.com/max/1015/1*y1ynWN09Z6k5XUxXBSEyPA.png) -->
+
+<p align="center">
+  <img src="https://miro.medium.com/max/1015/1*y1ynWN09Z6k5XUxXBSEyPA.png" alt="Example"/>
+</p>
+
+Some initial AMM contract often sufferse from [impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained). This problem could be alleviated by using several approaches like using stablecoin pairs or having a flexible exchange ratio.
 
 **Pros**:
 - Swap native token cross chain. Do not require chain to have an ERC20 contract.
