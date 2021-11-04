@@ -33,5 +33,12 @@ module.exports = {
         "learn/cross-chain-contract-interaction",
       ],
     },
+    {
+      type: "category",
+      label: "Learn",
+      collapsible: true,
+      collapsed: true,
+      items: ["more/timeline"],
+    },
   ],
 };
