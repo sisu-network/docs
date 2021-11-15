@@ -21,7 +21,7 @@ This solution is fairly easy to implement as it only requires counting the numbe
 - Very expensive. Required N transaction on-chain to dispatch a single transaction
 
 ## Single owner of the gateway contract
-Another common solution employed by many cross chain communication is to have a single owner of the gateway smart contract. This contract owner keeps the private key that control the gateway. Any transaction from this contract only requires a single signature and hence fast and efficient.
+Another common solution employed by many cross chain communication is to have a single owner of the gateway smart contract. This contract owner keeps the private key that controls the gateway. Any transaction from this contract only requires a single signature and hence fast and efficient.
 
 The downside of this solution is obviously the sacrifice of decentralization. Since the contract has only one private key owner, this is a single point of failure of the cross chain communication process. If this key is hacked or the key holder acts maliciously, all the assets held by the gateway contract could be at risk.
 

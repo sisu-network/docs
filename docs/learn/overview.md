@@ -6,7 +6,7 @@ Most cross chain solutions deploys a smart contract at each blockchain. This con
 ### Concepts
 
 Some key concepts when learning about cross chain transaction:
-- **Gateway**: This is the entry for all the transaction coming in and out of a blockchain. The gateway is usually a smart contract deployed on the chain or wallet in case the blockchain does not support smart contract. The gateway is controlled by a bridge that is outside of each chain.
+- **Gateway**: This is the entry for all the transactions coming in and out of a blockchain. The gateway is usually a smart contract deployed on the chain or wallet in case the blockchain does not support smart contracts. The gateway is controlled by a bridge that is outside of each chain.
 - **Bridge**: an entity (could be single or multiple parties) that observe and control gateways at various chains.
 - **Transaction input (TxIn)**: a request that is sent to the gateway to initiate a cross chain transfer.
 - **Transaction output (TxOut)**: a transaction produced by the bridge and sent to the gateway.

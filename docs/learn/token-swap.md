@@ -1,7 +1,7 @@
 ---
 title: Token Swap
 ---
-There are 2 common models for token swapping cross chain: using wrapped tokens and building an AMM (automated market maker). There is a third model using atomic swap and hashed timelock contract but they are often tied to a few chains instead of a being a general solution.
+There are 2 common models for token swapping cross chain: using wrapped tokens and building an AMM (automated market maker). There is a third model using atomic swap and hashed timelock contract but they are often tied to a few chains instead of being a general solution.
 
 ## Wrapped Token Approach
 
@@ -11,16 +11,16 @@ This approach requires an ERC20 contract (or some equivalent contract) deployed 
 - No slippage or impermanent loss when swapping
 - Predictable output from each transaction
 - Simple, easy to understand model and easy to track down issues.
-- Can support unlimited number of token on theory.
+- Can support an unlimited number of tokens in theory.
 
 **Cons**:
 - Requires each chain to have a ERC20 (or something equivalent) to work. Does not work for Bitcoin without special logic
 - Cannot convert into native token directly.
-- Gateway might run out of tokens on destination chain.
+- Gateway might run out of tokens on the destination chain.
 - Gateway contract might run out gas to dispatch final transaction (needs constant monitoring)
 
 ## AMM Model
-The AMM concept was introduced by Uniswap team on Ethereum main chain. The basic idea behind AMM is to retain a constant curve x * y = k where x is the supply and y is an exchange rate between 2 tokens. When someone buys a token A, the supply of A decreases and hence the exchange rate of A with B increases to keep the equilibrium. The increase in exchange rate disincentivies people to buy token A and incentivies buyer to buy token B.
+The AMM concept was introduced by the Uniswap team on the Ethereum main chain. The basic idea behind AMM is to retain a constant curve x * y = k where x is the supply and y is an exchange rate between 2 tokens. When someone buys a token A, the supply of A decreases and hence the exchange rate of A with B increases to keep the equilibrium. The increase in exchange rate disincentivizes people to buy token A and incentives buyer to buy token B.
 
 <!-- ![Example of automated market maker](https://miro.medium.com/max/1015/1*y1ynWN09Z6k5XUxXBSEyPA.png) -->
 
@@ -28,14 +28,14 @@ The AMM concept was introduced by Uniswap team on Ethereum main chain. The basic
   <img src="https://miro.medium.com/max/1015/1*y1ynWN09Z6k5XUxXBSEyPA.png" alt="Example"/>
 </p>
 
-Some initial AMM contract often sufferse from [impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained). This problem could be alleviated by using several approaches like using stablecoin pairs or having a flexible exchange ratio.
+Some initial AMM contract often suffers from [impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained). This problem could be alleviated by using several approaches like using stablecoin pairs or having a flexible exchange ratio.
 
 **Pros**:
-- Swap native token cross chain. Do not require chain to have an ERC20 contract.
-- No worry about the gateway runs out of token supply as the supply cannot go to 0.
+- Swap native token cross chain. Do not require a chain to have an ERC20 contract.
+- The gateway cannot run out of token supply as the supply cannot go to 0.
 - Very unlikely to run out of gas with native tokens coming into the pool.
 
 **Cons**:
 - Unpredictable output
-- Use more complicated model compared to wrapped token approach.
+- Use a more complicated model compared to the wrapped token approach.
 - Might require lots of token pairs to make this work.
