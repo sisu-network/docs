@@ -35,7 +35,7 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Learn",
+      label: "More",
       collapsible: true,
       collapsed: true,
       items: ["more/timeline"],
