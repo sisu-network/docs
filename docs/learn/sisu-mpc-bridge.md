@@ -21,3 +21,16 @@ In Sisu, a node can record a transaction it sees but it would be not process imm
 Similarly, each transaction output must be agreed by the majority of the network before moving into signing phase. Nodes can run different version of the software and malicious actors can inject corrupted data. It's important that all nodes agree on how a transaction output looks like instead of assuming everyone will produce a deterministic output based on a single input.
 
 ## MPC Engine
+After the Consensus Engine agrees on the transaction output, it passes the data to MPC Engine for distributed key signing. Sisu chooses Threshold Signature Scheme(TSS) for distributed key signing. TSS has a number of advantage, including no key reconstruction and being resilient when some participating nodes are offline.
+
+### What is Threshold Signature Scheme?
+
+To explain in a simplified terms, TSS allows us to break a single private key into N pieces and give each node in the network of the key.
+
+When the network needs to sign a transaction, each node creates a portion of the final signature using its part of the private key. They then exchange their signature parts and after several rounds of exchange, everyone has exactly the same final copy of the signature.
+
+Unlike Shamir Secret Sharing, TSS does not reconstruct the private key during the signing process and hence the private key is leaked. The private key is not created during the key generation process either. Each node generates its own part of the key but the final private key remains unknown to the network.
+
+What happens if some nodes are offine at the signing phase?
+
+Another benefit of TSS is that it allows the t-of-n nodes singing models which requires only **any t** nodes out of n to be online at the signing phase. For example, if our TSS scheme is 15-of-20, we can tolerate up to any 5 nodes to be offline to produce a valid signature.
