@@ -1,5 +1,5 @@
 ---
-title: Timeline
+title: Roadmap
 ---
 This is a planned timeline of Sisu network. The roadmap might be subject to change. You can check our website for any update on Sisu's work.
 

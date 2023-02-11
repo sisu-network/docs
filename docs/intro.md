@@ -16,4 +16,6 @@ We expect in 3 years, the total volume of transaction cross chain will be bigger
 
 ## Does Sisu have its own tokens?
 
-Sisu token is the native token of Sisu network. The token is used to various activities in the ecosystem, including paying for transaction fee, staking reward or governance voting. We will release the guideline details of how Sisu tokens could be used when our tokenomics is finalized.
+Sisu token is the native token of Sisu network. The token is used to various activities in the ecosystem, including paying for transaction fee, staking reward or governance voting. It could be used for future projects within Sisu's ecosystem, including a potential high throughput smart chain.
+
+We will release the guideline details of how Sisu tokens could be used when our tokenomics is finalized.
