@@ -23,17 +23,9 @@ const sidebars = {
       label: "Welcome",
     },
     {
-      type: "category",
-      label: "Blockchain Basics",
-      collapsible: true,
-      collapsed: true,
-      items: [
-        "basics/what-is-blockchain",
-        "basics/bitcoin",
-        "basics/ethereum",
-        "basics/chains-explosion",
-        "basics/need-for-bridge",
-      ],
+      type: "doc",
+      id: "architecture",
+      label: "Architecture Overview",
     },
     {
       type: "category",
