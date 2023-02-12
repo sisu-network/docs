@@ -33,3 +33,12 @@ What we want is a solution that is cheap (ideally one single transaction per cro
 
 **Cons**:
 - Fragile solution due to single point of failure. The loss of the private key could put all assets locked in all chains at risk.
+
+## Optimistic bridges
+
+Optimistic bridge is another type of bridge that was hailed to solve the trilemma of bridging problem. This approach triggers a merkle root update when someone initiates a cross chain transfer. This proof could be used to submit to destination chain contract, followed by a wait period (30 minutes - multiple hours) for any observer to prove fraud. When this window timeouts, the application is finalized and data could be consumed by recipient.
+
+While this approach sounds ideal, it has a number of issues:
+- It's not fully extensible. It heavily relies on each participating chain to support Turing complete smart contract system. It's impossible to apply this approach for Bitcoin (by far still the king of crypto).
+- Long wait time is often a barrier for real-time applications to operate.
+- Complex contracts could be vulnerable to undiscovered bugs. The $200M Nomad bridge hack originates from a uncaught corner case bug in the optimistic contract despite being audited heavily. The immutability of the contract makes it extremely hard to stop the attack even when the bug is disclosed. Threshold Signature or multisig approaches have much simpler contracts, easier to audit and hence less susceptible to severe bugs.

@@ -26,7 +26,7 @@ const sidebars = {
       type: "category",
       label: "Blockchain Basics",
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
         "basics/what-is-blockchain",
         "basics/bitcoin",
@@ -53,7 +53,7 @@ const sidebars = {
       label: "Privacy and ZKP",
       collapsible: true,
       collapsed: false,
-      items: ["privacy/introduction", "privacy/snark"],
+      items: ["privacy/introduction", "privacy/zkp-snark", "privacy/sisu-privacy"],
     },
     {
       type: "category",
