@@ -1,6 +1,7 @@
 ---
 title: Token Swap
 ---
+
 There are 2 common models for token swapping cross chain: using wrapped tokens and building an AMM (automated market maker). There is a third model using atomic swap and hashed timelock contract but they are often tied to a few chains instead of being a general solution.
 
 ## Wrapped Token Approach
