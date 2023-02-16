@@ -52,7 +52,7 @@ const sidebars = {
       label: "Developers",
       collapsible: true,
       collapsed: false,
-      items: ["developers/getting-started", "developers/get-test-tokens", "developers/swap-tokens"],
+      items: ["developers/getting-started", "developers/get-test-tokens"],
     },
     {
       type: "category",
