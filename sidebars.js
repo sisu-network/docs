@@ -66,7 +66,7 @@ const sidebars = {
       label: "More",
       collapsible: true,
       collapsed: false,
-      items: ["more/roadmap"],
+      items: ["more/roadmap", "more/tutorial"],
     },
   ],
 };
