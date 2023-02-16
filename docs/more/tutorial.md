@@ -1,6 +1,9 @@
 ---
-title: Tutorial
+title: Testnet DEX
 ---
+
+You can participate in our incentivized testnet program by doing token swap on our testnet DEX.
+
 **Step 01**: go to this website https://app.ko.exchange/
 
 **Step 02**: Connect wallet to KO exchange. You can choose either Metamask or Coinbase wallet
