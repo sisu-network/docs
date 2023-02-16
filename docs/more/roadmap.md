@@ -6,16 +6,11 @@ This is a planned timeline of Sisu network. The roadmap might be subject to chan
 ###  1. Cross chain token swap (Tail)
 This is a testnet for swapping non-native tokens cross chain, including common tokens like ERC20 and NFT. Sisu dev team will work with other crypto teams who want to build DEX to release their testnet version. Sisu testnet and validator's group will be private at this stage.
 
-### 2. Native coin swapping (Talon)
-This stage enables user to do native coins/token swapping instead of using wrapped tokens. Liquidity provider can stake their contribution on testnet in reward for Sisu's tokens.
+### 2. General cross chain messaging (Talon)
+General cross chain messaging allow smart contracts to send and receive data between different chains. Contracts can share application logic data and not just liquidity with contracts in other chains.
 
-### 3. API hub for cross chain contracts (Spine)
-"Instead of learning many blockchain's languages, Sisu deploys contract gateway at different chains and let developers interact with remote contracts through the gateway using their familiar languages.
+### 3. Private transaction (Fang)
+Privacy is one of the missing features in many established blockchains. The Fang release allows users to privately send and receive tokens in any chains without revealing who you are sending money to even to the validator nodes.
 
-You focus on the world and let Sisu handles the infrastructure, including other blockchain's updates. The source code and testnet are also opened for public at this stage."
-
-### 4. Private transaction (Fang)
-Many users do care about the privacy of their transaction. The Fang deployment offers users an option to shield their transaction with minor additional cost.
-
-### 5. Mainnet (Heart)
-The mainnet is launched and deployed on various blockchains with their ecosystems. You can enjoy all the features of Sisu that you see in testnet.
+### 4. Sisu dApp ecosystem (Heart)
+Sisu will expand its full eco-system of web3 dApp beyond being a bridge. The Sisu bridge is one of the core components of the Sisu ecosystem that allows applications to interact with each other. It's possible that Sisu team could develop a high-throughput smart chain that deeply integrated with the Sisu bridge to facilitate fast, secure & low-fee transactions.

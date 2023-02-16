@@ -36,25 +36,25 @@ What we want is a solution that is cheap (ideally one single transaction per cro
 
 ## Optimistic Bridge
 
-Optimistic bridge is another type of bridge that was hailed to solve the trilemma of bridging problem. This approach triggers a merkle root update when someone initiates a cross chain transfer. This proof could be used to submit to destination chain contract, followed by a wait period (30 minutes - multiple hours) for any observer to prove fraud. When this window timeouts, the application is finalized and data could be consumed by recipient.
+Optimistic bridge is another type of bridge that was hailed to solve the trilemma of bridging problems. This approach triggers a merkle root update when someone initiates a cross chain transfer. This proof could be used to submit a destination chain contract, followed by a wait period (30 minutes - multiple hours) for any observer to prove fraud. When this window timeouts, the application is finalized and data could be consumed by the recipient.
 
 While this approach sounds ideal, it has a number of issues:
 - It's not fully extensible. It heavily relies on each participating chain to support Turing complete smart contract system. It's impossible to apply this approach for Bitcoin (by far still the king of crypto).
 - Long wait time is often a barrier for real-time applications to operate.
-- Complex contracts could be vulnerable to undiscovered bugs. The [$200M Nomad bridge hack](https://halborn.com/the-nomad-bridge-hack-a-deeper-dive/) originates from a uncaught corner case bug in the optimistic contract despite being audited heavily. The immutability of the contract makes it extremely hard to stop the attack even when the bug is disclosed. Threshold Signature or multisig approaches have much simpler contracts, easier to audit and hence less susceptible to severe bugs.
+- Complex contracts could be vulnerable to undiscovered bugs. The [$200M Nomad bridge hack](https://halborn.com/the-nomad-bridge-hack-a-deeper-dive/) originates from an uncaught corner case bug in the optimistic contract despite being audited heavily. The immutability of the contract makes it extremely hard to stop the attack even when the bug is disclosed. Threshold Signature or multisig approaches have much simpler contracts, easier to audit and hence less susceptible to severe bugs.
 
 **Pros**:
 - This bridging model requires minimum trust.
 - Could be extended to general cross chain messages.
 
 **Cons**:
-- Does not work on Bitcoin as it requires the blockchain to fully support Turing-complete execution machine.
+- Does not work on Bitcoin as it requires the blockchain to fully support a Turing-complete execution machine.
 - Very complex contract and much more prone to bugs ($200M [Nomad Hack](https://halborn.com/the-nomad-bridge-hack-a-deeper-dive/))
 - Very high transaction fee due to on-chain proof verification.
 
 ## Hash Time-Locked Contract
 
-Hash Time-Locked Contract (HTLC) bridge is similar to atomic swap. The idea is to let 2 parties exchanges cryptographic hash before entering a transaction. A time frame is set for an atomic swap to take place. If a trade does not occur during that time frame, the deposited tokens could be returned to original owner using the cryptographic hash.
+Hash Time-Locked Contract (HTLC) bridge is similar to atomic swap. The idea is to let 2 parties exchange cryptographic hash before entering a transaction. A time frame is set for an atomic swap to take place. If a trade does not occur during that time frame, the deposited tokens could be returned to the original owner using the cryptographic hash.
 
 **Pros**:
 - Requires minimum trust through p2p trading
