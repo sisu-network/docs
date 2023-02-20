@@ -37,7 +37,6 @@ const sidebars = {
         "bridge/how-bridge-is-secured",
         "bridge/sisu-mpc-bridge",
         "bridge/token-swap",
-        "bridge/cross-chain-contract-interaction",
       ],
     },
     {
